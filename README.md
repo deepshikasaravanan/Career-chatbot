@@ -79,7 +79,6 @@ faiss-cpu for vector search
 ✅ Ensure valid API keys in .env
 ✅ Tested locally on macOS
 
-<img width="1500" alt="Screenshot 2025-06-25 at 2 20 36 PM" src="https://github.com/user-attachments/assets/e6521ce8-58d0-4053-ab03-c6039be6d8e6" />
 
 
 
