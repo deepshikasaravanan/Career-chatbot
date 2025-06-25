@@ -1,57 +1,81 @@
-# CareerSage
+# Career Chatbot
 
-CareerSage is an AI-powered chatbot designed to provide personalized career advice. It analyzes resumes, suggests job opportunities based on user skills and experiences, and offers valuable interview tips. Leveraging SerpApi, CareerSage fetches and scrapes career-related articles, building a rich knowledge base for delivering expert-backed career guidance. With integration from reputable career advice books, CareerSage ensures comprehensive support for career navigation.
+This is an AI-powered career chatbot built with **Streamlit** and **LangChain** that helps users interactively explore career paths, analyze documents, and get insights from uploaded files.
 
-## Use Case
+## 🚀 Features
 
-CareerSage has the potential to transform career counseling and job search platforms by:
+- **Career Guidance Chatbot**: Ask questions related to career paths, skills, and job preparation.
+- **Document Processing**: Upload and process PDF, DOCX, PPTX, and email files for insights.
+- **LLM Integration**: Uses LangChain + Google Generative AI for natural language interaction.
+- **Search & Summarization**: Search across documents and generate summaries.
+- **Streamlit UI**: Simple, interactive web app interface.
 
-- **Job Seekers**: Providing resume feedback, job recommendations aligned with skills, and expert interview preparation.
-- **Career Counselors and HR Professionals**: Offering insights to effectively guide clients or candidates with well-rounded, up-to-date career advice.
+---
 
-CareerSage delivers accessible, personalized, and data-driven career guidance, helping users navigate their professional journeys with ease.
+## 🛠 Installation
 
-## Technologies
+1️⃣ **Clone the repository**
+```bash
+git clone https://github.com/deepshikasaravanan/Career-chatbot.git
+cd Career-chatbot
 
-- **Gemini Model**
-- **LangChain**
-- **Streamlit**
+2️⃣ Create and activate a virtual environment
 
-## Workflow
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+3️⃣ Install dependencies
 
-1. **Generate Vector Embeddings**: Use Gemini embeddings in LangChain.
-2. **Store Vector Embeddings**: Save them in the Faiss Vector Database.
-3. **Fetch Relevant Chunk**: Retrieve the most relevant chunk of the source based on user input using vector embeddings.
-4. **Create Prompt Template**: Design a template for prompts.
-5. **Generate Response**: Send user input and relevant chunk to Gemini.
-6. **Display Chat**: Show the conversation on the Streamlit dashboard.
+bash
+Copy
+Edit
+pip install -r requirements.txt
+4️⃣ Set environment variables
 
-## Applications
+bash
+Copy
+Edit
+cp env.example .env
+Edit .env and add your API keys (e.g., Google Generative AI key).
 
-- **Educational Institutions**: Integrate the chatbot into school and university portals to guide students towards their career paths.
-- **Corporate Onboarding**: Assist new employees in understanding their career growth and development opportunities within the company.
-- **Remote Areas**: Provide career advice in geographically isolated locations where traditional counseling is scarce.
-- **Continuous Learning Platforms**: Offer career advice based on skills acquired through online courses or MOOCs.
+▶️ Usage
+Run the app:
 
+bash
+Copy
+Edit
+streamlit run app.py
+Open in your browser at http://localhost:8501/.
 
-## Getting Started
+📂 Project Structure
+bash
+Copy
+Edit
+├── app.py               # Streamlit app main file
+├── requirements.txt      # Python dependencies
+├── env.example           # Example env file (update as .env)
+└── README.md             # This file
+⚙ Dependencies
+Key packages:
 
-1. Clone the repository: `git clone https://github.com/sanikamal/career-advisor-chatbot.git`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Set the API keys for SerpApi and Gemini in your environment variables. Add the following lines to your `.env` file:
-   ```
-   SERPAPI_API_KEY=your_serpapi_api_key_here
-   GOOGLE_API_KEY=your_google_api_key_here
-   ```
-4. Run the application: `streamlit run app.py`
+streamlit
 
-## Contributing
+langchain
 
-Contributions are welcome! Please read the [Contributing Guidelines]() before making a pull request.
+google-generativeai
 
-## License
+pandas, numpy
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+beautifulsoup4, pdfminer.six, docx2txt, python-pptx
 
+faiss-cpu for vector search
 
-Feel free to reach out with any questions or feedback. Happy job hunting!
+(See requirements.txt for full list)
+
+📌 Notes
+✅ Python 3.9+ recommended
+✅ Ensure valid API keys in .env
+✅ Tested locally on macOS
+
